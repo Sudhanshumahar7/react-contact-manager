@@ -1,3 +1,6 @@
+## Deployed website link: https://react-contact-manager-eight.vercel.app/
+
+
 # Contact List Application
 
 A modern, feature-rich contact management application built with React. This application allows users to view, search, add, edit, and delete contacts with a clean and intuitive user interface.
@@ -162,6 +165,12 @@ This project is open source and available under the MIT License.
 
 -----
 
+-----
+
 ## 👨‍💻 Author
 
 Created as part of Tria Frontend Assignment
+
+If someone wants to see this app locally, then they have to **uncomment line 1** and **comment out line 2** in `src/services/api.js` to use the local `json-server` backend.
+
+-----
