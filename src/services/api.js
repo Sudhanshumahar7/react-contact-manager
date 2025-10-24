@@ -1,6 +1,5 @@
 //const API_URL = 'http://localhost:5000/contacts'; //for local running the project
-// const API_URL = '/api/contacts'; // for Vercel deployment
-const API_URL = 'https://your-mockapi-url.mockapi.io/contacts';
+const API_URL = '/api/contacts'; // for Vercel deployment
 
 
 export const contactService = {
