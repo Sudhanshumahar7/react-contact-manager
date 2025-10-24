@@ -1,4 +1,4 @@
-## Deployed website link: https://react-contact-manager-eight.vercel.app/
+## Deployed App link: https://react-contact-manager-eight.vercel.app/
 
 
 # Contact List Application
