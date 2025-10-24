@@ -80,21 +80,7 @@ npm start
 This will start the React application on `http://localhost:3000`. Your default browser should open automatically.
 
 -----
-
-## 🚀 Deployment to Vercel
-
-This project is configured for a seamless "zero-config" deployment to **Vercel**.
-
-1.  **Push your code** to a Git repository (e.g., GitHub, GitLab).
-2.  **Import the project** into your Vercel dashboard.
-3.  **Deploy\!**
-
-Vercel will automatically:
-
-  - Detect and build the React application (from the root `package.json`).
-  - Detect and deploy the serverless functions inside the `/api` directory, making them available as your production API.
-
------
+ ##NOTE:- To Run deployed link https://react-contact-manager-eight.vercel.app/ first clone this github on local and then run the command npm run server 
 
 ## 📁 Project Structure
 
