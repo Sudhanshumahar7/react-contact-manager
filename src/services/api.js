@@ -1,5 +1,5 @@
 //const API_URL = 'http://localhost:5000/contacts'; //for local running the project
-const API_URL = '/api/contacts'; // for Vercel diployment
+const API_URL = '/api/contacts'; // for Vercel deployment
 
 
 export const contactService = {
@@ -54,7 +54,7 @@ export const contactService = {
   // Update contact
   updateContact: async (id, contact) => {
     try {
-      const response = await fetch(`${API_URL}/${id}`, {
+      const response = await fetch(`${API_URL}?id=${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export const contactService = {
   // Delete contact
   deleteContact: async (id) => {
     try {
-      const response = await fetch(`${API_URL}/${id}`, {
+      const response = await fetch(`${API_URL}?id=${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
