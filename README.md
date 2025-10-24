@@ -163,3 +163,4 @@ This project is open source and available under the MIT License.
 ## 👨‍💻 Author
 
 Created as part of Tria Frontend Assignment
+
