@@ -1,70 +1,167 @@
-# Getting Started with Create React App
+# Contact List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, feature-rich contact management application built with React. This application allows users to view, search, add, edit, and delete contacts with a clean and intuitive user interface.
 
-## Available Scripts
+-----
 
-In the project directory, you can run:
+## 🌟 Features
 
-### `npm start`
+  - **View Contacts**: Display all contacts in a beautiful card-based layout.
+  - **Search Functionality**: Real-time search contacts by name.
+  - **Add Contacts**: Create new contacts with name, email, phone, and company information.
+  - **Edit Contacts**: Update existing contact information.
+  - **Delete Contacts**: Remove contacts with a confirmation prompt.
+  - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices.
+  - **Loading States**: Smooth loading indicators for a better user experience.
+  - **Error Handling**: Comprehensive error messages and validation.
+  - **Dual Backend**:
+      - **Local**: Uses `json-server` for rapid local development.
+      - **Production**: Uses Vercel Serverless Functions for a live, scalable backend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-----
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Tech Stack
 
-### `npm test`
+  - **React**: Frontend library for building the user interface.
+  - **JSON Server**: Mock REST API for local development.
+  - **Vercel Serverless Functions**: For the production backend API (in the `/api` directory).
+  - **CSS3**: Styling with modern features (Grid, Flexbox, Animations).
+  - **Fetch API**: For making HTTP requests to the backend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-----
 
-### `npm run build`
+## 🛠️ Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow these instructions to get the project up and running on your local machine for development and testing.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Before you begin, ensure you have the following installed:
 
-### `npm run eject`
+  - Node.js (v14 or higher)
+  - npm (v6 or higher)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation & Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.  **Clone the repository**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    git clone <your-repository-url>
+    cd contactlist
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2.  **Install dependencies**:
+    This will install all the necessary packages for both the React app and the local `json-server`.
 
-## Learn More
+    ```bash
+    npm install
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running the Application Locally
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You need to run **two separate terminal sessions** simultaneously for the local development environment: one for the mock API (JSON Server) and one for the React application.
 
-### Code Splitting
+**Terminal 1: Start the JSON Server (Backend)**
+This command starts the mock API server, which watches the `public/db.json` file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run server
+```
 
-### Analyzing the Bundle Size
+This will start the JSON server on `http://localhost:5000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Terminal 2: Start the React App (Frontend)**
+This command starts the React development server.
 
-### Making a Progressive Web App
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This will start the React application on `http://localhost:3000`. Your default browser should open automatically.
 
-### Advanced Configuration
+-----
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🚀 Deployment to Vercel
 
-### Deployment
+This project is configured for a seamless "zero-config" deployment to **Vercel**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1.  **Push your code** to a Git repository (e.g., GitHub, GitLab).
+2.  **Import the project** into your Vercel dashboard.
+3.  **Deploy\!**
 
-### `npm run build` fails to minify
+Vercel will automatically:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - Detect and build the React application (from the root `package.json`).
+  - Detect and deploy the serverless functions inside the `/api` directory, making them available as your production API.
+
+-----
+
+## 📁 Project Structure
+
+```
+contactlist/
+├── api/
+│   └── contacts.js          # Vercel serverless function for production API
+├── public/
+│   └── db.json              # Mock database for local json-server
+├── src/
+│   ├── components/          # React components
+│   │   ├── ContactList.js
+│   │   ├── ContactCard.js
+│   │   ├── SearchBar.js
+│   │   ├── AddContactModal.js
+│   │   └── EditContactModal.js
+│   ├── services/
+│   │   └── api.js           # API service layer (handles requests)
+│   ├── styles/
+│   │   ├── App.css          # Main application styles
+│   │   └── index.css        # Global styles
+│   ├── App.js               # Root component
+│   └── index.js             # Entry point
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+-----
+
+## 📝 Assumptions & Decisions
+
+1.  **Dual API**: `json-server` is used *only* for rapid local prototyping. The production deployment on Vercel relies on the serverless functions in the `/api` directory.
+2.  **Client-Side Filtering**: Search is implemented client-side for better performance with small datasets.
+3.  **Avatar Service**: Using UI Avatars API for automatic avatar generation.
+4.  **No Authentication**: This is a demo app and does not include user authentication.
+5.  **Local Storage**: Data in the local `db.json` file is persistent on file but will reset if the file is overwritten.
+
+-----
+
+## 🔮 Future Enhancements
+
+  - [ ] User authentication and authorization (e.g., with NextAuth or Clerk)
+  - [ ] Connect the Vercel API to a persistent database (e.g., Vercel Postgres, MongoDB Atlas)
+  - [ ] Contact groups/categories
+  - [ ] Export contacts (CSV, vCard)
+  - [ ] Advanced filtering (by company, multiple fields)
+  - [ ] Sorting options
+  - [ ] Pagination for large datasets
+  - [ ] Dark mode support
+
+-----
+
+## 🐛 Known Issues
+
+  - The local `json-server` must be running for the app to function in the local development environment.
+  - The production API on Vercel is not yet connected to a persistent database (data will be ephemeral unless `api/contacts.js` is configured with a DB).
+  - No offline support.
+
+-----
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+-----
+
+## 👨‍💻 Author
+
+Created as part of Tria Frontend Assignment

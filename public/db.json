@@ -1,0 +1,60 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "phone": "+1 (555) 123-4567",
+      "company": "Tech Corp",
+      "avatar": "https://ui-avatars.com/api/?name=Alice+Johnson&background=4F46E5&color=fff"
+    },
+    {
+      "id": "2",
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "phone": "+1 (555) 234-5678",
+      "company": "Innovation Labs",
+      "avatar": "https://ui-avatars.com/api/?name=Bob+Smith&background=10B981&color=fff"
+    },
+    {
+      "id": "3",
+      "name": "Carol Williams",
+      "email": "carol.williams@example.com",
+      "phone": "+1 (555) 345-6789",
+      "company": "Design Studio",
+      "avatar": "https://ui-avatars.com/api/?name=Carol+Williams&background=F59E0B&color=fff"
+    },
+    {
+      "id": "5",
+      "name": "Emma Davis",
+      "email": "emma.davis@example.com",
+      "phone": "+1 (555) 567-8901",
+      "company": "Finance Group",
+      "avatar": "https://ui-avatars.com/api/?name=Emma+Davis&background=8B5CF6&color=fff"
+    },
+    {
+      "id": "6",
+      "name": "Frank Miller",
+      "email": "frank.miller@example.com",
+      "phone": "+1 (555) 678-9012",
+      "company": "Consulting Inc",
+      "avatar": "https://ui-avatars.com/api/?name=Frank+Miller&background=EC4899&color=fff"
+    },
+    {
+      "id": "7",
+      "name": "Grace Wilson",
+      "email": "grace.wilson@example.com",
+      "phone": "+1 (555) 789-0123",
+      "company": "Healthcare Solutions",
+      "avatar": "https://ui-avatars.com/api/?name=Grace+Wilson&background=06B6D4&color=fff"
+    },
+    {
+      "id": "8",
+      "name": "Henry Taylor",
+      "email": "henry.taylor@example.com",
+      "phone": "+1 (555) 890-1234",
+      "company": "Education First",
+      "avatar": "https://ui-avatars.com/api/?name=Henry+Taylor&background=84CC16&color=fff"
+    }
+  ]
+}
